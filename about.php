@@ -9,7 +9,7 @@ include 'includes/header.php';
 
 
     <div class="container">
-        <div class="hero-content" style="grid-template-columns: 1fr;">
+        <div class="hero-content">
             <div class="hero-text text-center" data-aos="fade-up">
                 <h1><?php echo getTranslation('about_title'); ?></h1>
                 <p><?php echo getTranslation('about_subtitle'); ?></p>
@@ -24,7 +24,7 @@ include 'includes/header.php';
             <div class="col-lg-6" data-aos="fade-right">
                 <div class="card h-100 p-5">
                     <div class="d-flex align-items-center gap-3 mb-4">
-                        <div class="service-icon" style="width: 60px; height: 60px;">
+                        <div class="service-icon">
                             <i class="bi bi-file-law fs-2 text-primary"></i>
                         </div>
                         <h2 class="fs-3 fw-bold mb-0"><?php echo getTranslation('legal_framework'); ?></h2>
@@ -36,7 +36,7 @@ include 'includes/header.php';
             <div class="col-lg-6" data-aos="fade-left">
                 <div class="card h-100 p-5">
                     <div class="d-flex align-items-center gap-3 mb-4">
-                        <div class="service-icon" style="width: 60px; height: 60px;">
+                        <div class="service-icon">
                             <i class="bi bi-shield-check fs-2 text-success"></i>
                         </div>
                         <h2 class="fs-3 fw-bold mb-0"><?php echo getTranslation('our_mission'); ?></h2>

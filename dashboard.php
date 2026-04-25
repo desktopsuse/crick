@@ -1237,58 +1237,6 @@ include 'includes/header.php';
     </div>
 </div>
 
-<script>
-    // Image preview function
-    function previewPhoto(input, previewId) {
-        if (input.files && input.files[0]) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const container = document.getElementById(previewId + 'Container');
-                const preview = document.getElementById(previewId);
-                if (container && preview) {
-                    preview.src = e.target.result;
-                    container.style.display = 'block';
-                }
-            }
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        // Service cards click handler
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.addEventListener('click', function() {
-                const service = this.getAttribute('data-service');
-                if (service === 'birth') new bootstrap.Modal(document.getElementById('birthModal')).show();
-                else if (service === 'marriage') new bootstrap.Modal(document.getElementById('marriageModal')).show();
-                else if (service === 'divorce') new bootstrap.Modal(document.getElementById('divorceModal')).show();
-                else if (service === 'death') new bootstrap.Modal(document.getElementById('deathModal')).show();
-            });
-        });
-
-        // Navigation links click handler
-        const navBirth = document.getElementById('navBirth');
-        const navMarriage = document.getElementById('navMarriage');
-        const navDivorce = document.getElementById('navDivorce');
-        const navDeath = document.getElementById('navDeath');
-
-        if (navBirth) navBirth.addEventListener('click', function(e) {
-            e.preventDefault();
-            new bootstrap.Modal(document.getElementById('birthModal')).show();
-        });
-        if (navMarriage) navMarriage.addEventListener('click', function(e) {
-            e.preventDefault();
-            new bootstrap.Modal(document.getElementById('marriageModal')).show();
-        });
-        if (navDivorce) navDivorce.addEventListener('click', function(e) {
-            e.preventDefault();
-            new bootstrap.Modal(document.getElementById('divorceModal')).show();
-        });
-        if (navDeath) navDeath.addEventListener('click', function(e) {
-            e.preventDefault();
-            new bootstrap.Modal(document.getElementById('deathModal')).show();
-        });
-    });
-</script>
+<script src="assets/ js/main.js"></script>
 
 <?php include 'includes/footer.php'; ?>

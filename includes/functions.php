@@ -106,7 +106,7 @@ function setLanguage($lang)
 }
 
 // ============================================
-// LANGUAGE TRANSLATION FUNCTION (COMPLETE)
+// LANGUAGE TRANSLATION FUNCTION (UPDATED - NO DUPLICATES)
 // ============================================
 function getTranslation($key, $lang = null)
 {
@@ -246,7 +246,7 @@ function getTranslation($key, $lang = null)
             'online_service' => 'Online Service',
             'digital_integration' => 'Digital Integration',
 
-            // Submit
+            // Submit / Form
             'submit' => 'Submit Registration',
             'profile_updated' => 'Profile updated successfully!',
             'registration_success' => 'Registration submitted successfully!',
@@ -281,14 +281,11 @@ function getTranslation($key, $lang = null)
             'contact_info' => 'Contact Info',
             'all_rights_reserved' => 'All rights reserved.',
 
-            // English - Required keys
-            'birth_registration' => 'Birth Registration',
+            // Birth Registration Form
             'child_photo' => 'Child Photo',
-            'upload_photo' => 'Upload Photo',
-            'photo_format' => 'Supported formats',
             'child_info' => 'Child Information',
             'child_name' => 'Child\'s Full Name',
-            'father_name' => 'Father\'s Name',
+            'father_name' => 'Father\'s Full Name',
             'grandfather_name' => 'Grand Father\'s Name',
             'birth_details' => 'Birth Details',
             'gender' => 'Gender',
@@ -308,19 +305,9 @@ function getTranslation($key, $lang = null)
             'parents_info' => 'Parents Information',
             'mother_name' => 'Mother\'s Full Name',
             'mother_nationality' => 'Mother\'s Nationality',
-            'father_name' => 'Father\'s Full Name',
             'father_nationality' => 'Father\'s Nationality',
-            'cancel' => 'Cancel',
-            'submit' => 'Submit Registration',
 
-            // English
-            'divorcer_birth_registration_unique_id' => 'Divorcer (Husband) Birth Registration Unique ID',
-            'divorcee_birth_registration_unique_id' => 'Divorcee (Wife) Birth Registration Unique ID',
-            'divorce_date_info' => 'Divorce Date',
-            'divorce_place_registration' => 'Place of Divorce Registration',
-            'divorce_registration_date_info' => 'Divorce Registration Date',
-
-            // English
+            // Marriage Registration Form
             'husband_photo' => 'Husband Photo',
             'wife_photo' => 'Wife Photo',
             'husband_birth_registration_unique_id' => 'Husband Birth Registration Unique ID',
@@ -337,10 +324,15 @@ function getTranslation($key, $lang = null)
             'zone' => 'Zone',
             'city' => 'City',
             'marriage_registration_date' => 'Marriage Registration Date',
-            'select_month' => 'Select Month',
-            'select_region' => 'Select Region',
 
-            // English
+            // Divorce Registration Form
+            'divorcer_birth_registration_unique_id' => 'Divorcer (Husband) Birth Registration Unique ID',
+            'divorcee_birth_registration_unique_id' => 'Divorcee (Wife) Birth Registration Unique ID',
+            'divorce_date_info' => 'Divorce Date',
+            'divorce_place_registration' => 'Place of Divorce Registration',
+            'divorce_registration_date_info' => 'Divorce Registration Date',
+
+            // Death Registration Form
             'death_form_number' => 'Death Register Form Number',
             'death_unique_id' => 'Death Registration Unique ID',
             'deceased_photo' => 'Deceased Photo',
@@ -348,13 +340,11 @@ function getTranslation($key, $lang = null)
             'select_title' => 'Select Title',
             'sex' => 'Sex',
             'select_sex' => 'Select Sex',
-            'nationality' => 'Nationality',
             'date_of_birth' => 'Date of Birth (if available)',
             'place_of_death' => 'Place of Death',
             'date_of_death' => 'Date of Death',
             'cause_of_death' => 'Cause of Death',
             'death_registration_date' => 'Date of Death Registration',
-            'certificate_number' => 'Medical Certificate Number',
         ],
         'am' => [
             // Navigation
@@ -487,7 +477,7 @@ function getTranslation($key, $lang = null)
             'online_service' => 'የመስመር ላይ አገልግሎት',
             'digital_integration' => 'ዲጂታል ውህደት',
 
-            // Submit
+            // Submit / Form
             'submit' => 'ምዝገባ አስገባ',
             'profile_updated' => 'መገለጫ በሚገባ ተቀይሯል!',
             'registration_success' => 'ምዝገባ በተሳካ ሁኔታ ቀርቧል!',
@@ -522,14 +512,11 @@ function getTranslation($key, $lang = null)
             'contact_info' => 'የእውቂያ መረጃ',
             'all_rights_reserved' => 'ሁሉም መብቶች ተጠብቀዋል።',
 
-            // Amharic - Required keys
-            'birth_registration' => 'የልደት ምዝገባ',
+            // Birth Registration Form
             'child_photo' => 'የህጻኑ ፎቶ',
-            'upload_photo' => 'ፎቶ ይምረጡ',
-            'photo_format' => 'የሚፈቀዱ ቅርጾች',
             'child_info' => 'የህጻን መረጃ',
             'child_name' => 'የልጁ/ልጅቷ ሙሉ ስም',
-            'father_name' => 'የአባት ስም',
+            'father_name' => 'የአባት ሙሉ ስም',
             'grandfather_name' => 'የአያት ስም',
             'birth_details' => 'የልደት ዝርዝር',
             'gender' => 'ጾታ',
@@ -549,18 +536,9 @@ function getTranslation($key, $lang = null)
             'parents_info' => 'የወላጆች መረጃ',
             'mother_name' => 'የእናት ሙሉ ስም',
             'mother_nationality' => 'የእናት ዜግነት',
-            'father_name' => 'የአባት ሙሉ ስም',
             'father_nationality' => 'የአባት ዜግነት',
-            'cancel' => 'ሰርዝ',
-            'submit' => 'ምዝገባ አስገባ',
 
-            'divorcer_birth_registration_unique_id' => 'የባል ልዩ የልደት ምዝገባ መለያ ቁጥር',
-            'divorcee_birth_registration_unique_id' => 'የሚስት ልዩ የልደት ምዝገባ መለያ ቁጥር',
-            'divorce_date_info' => 'የፍቺ ቀን',
-            'divorce_place_registration' => 'ፍቺው የተፈጸመበት ቦታ',
-            'divorce_registration_date_info' => 'ፍቺው የተመዘገበበት ቀን',
-
-            // Amharic
+            // Marriage Registration Form
             'husband_photo' => 'የባል ፎቶ',
             'wife_photo' => 'የሚስት ፎቶ',
             'husband_birth_registration_unique_id' => 'የባል ልዩ የልደት ምዝገባ መለያ ቁጥር',
@@ -577,10 +555,15 @@ function getTranslation($key, $lang = null)
             'zone' => 'ዞን',
             'city' => 'ከተማ',
             'marriage_registration_date' => 'ጋብቻው የተመዘገበበት ቀን',
-            'select_month' => 'ወር ይምረጡ',
-            'select_region' => 'ክልል ይምረጡ',
 
-            // Amharic
+            // Divorce Registration Form
+            'divorcer_birth_registration_unique_id' => 'የባል ልዩ የልደት ምዝገባ መለያ ቁጥር',
+            'divorcee_birth_registration_unique_id' => 'የሚስት ልዩ የልደት ምዝገባ መለያ ቁጥር',
+            'divorce_date_info' => 'የፍቺ ቀን',
+            'divorce_place_registration' => 'ፍቺው የተፈጸመበት ቦታ',
+            'divorce_registration_date_info' => 'ፍቺው የተመዘገበበት ቀን',
+
+            // Death Registration Form
             'death_form_number' => 'የሞት ክብር መዝገብ ቅጽ ቁጥር',
             'death_unique_id' => 'የሞት ምዝገባ ልዩ መለያ ቁጥር',
             'deceased_photo' => 'የሟች ፎቶ',
@@ -588,13 +571,11 @@ function getTranslation($key, $lang = null)
             'select_title' => 'ማዕረግ ይምረጡ',
             'sex' => 'ጾታ',
             'select_sex' => 'ጾታ ይምረጡ',
-            'nationality' => 'ዜግነት',
             'date_of_birth' => 'የትውልድ ቀን (ካለ)',
             'place_of_death' => 'የሞት ቦታ',
             'date_of_death' => 'የሞት ቀን',
             'cause_of_death' => 'የሞት ምክንያት',
             'death_registration_date' => 'ሞቱ የተመዘገበበት ቀን',
-            'certificate_number' => 'የሕክምና ምስክር ወረቀት ቁጥር',
         ]
     ];
 

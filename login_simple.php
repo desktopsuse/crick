@@ -48,66 +48,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        .login-container {
-            max-width: 450px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
-
-        .card {
-            border-radius: 20px;
-            border: none;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn-login {
-            background: #005dac;
-            border: none;
-            padding: 12px;
-            font-weight: 600;
-            border-radius: 10px;
-        }
-
-        .btn-login:hover {
-            background: #004786;
-        }
-
-        .btn-back {
-            background: #6c757d;
-            border: none;
-            padding: 12px;
-            font-weight: 600;
-            border-radius: 10px;
-        }
-
-        .btn-back:hover {
-            background: #5a6268;
-        }
-
-        .logo {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .logo i {
-            font-size: 50px;
-            color: #005dac;
-        }
-    </style>
 </head>
 
-<body>
+
+<body style=" background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh;">
     <div class="container">
         <div class="login-container">
             <div class="card">
                 <div class="card-body p-4 p-md-5">
-                    <div class="logo">
+                    <div class="logoo">
                         <i class="bi bi-shield-check"></i>
                         <h3 class="fw-bold mt-2">Vital Events</h3>
                         <p class="text-muted"><?php echo getTranslation('login'); ?></p>

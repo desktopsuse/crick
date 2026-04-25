@@ -6,6 +6,11 @@ const STORAGE_KEY = "vital_events_language";
 
 let currentLang = localStorage.getItem(STORAGE_KEY) || "en";
 
+// Slideshow variables
+let slideIndex = 1;
+let slideInterval;
+let totalSlides = 10;
+
 /* ============================================ */
 // LANGUAGE SWITCHING FUNCTIONALITY
 /* ============================================ */
@@ -251,62 +256,29 @@ function initServiceCards() {
 }
 
 /* ============================================ */
-// SLIDESHOW FUNCTIONALITY
+// SLIDESHOW FUNCTIONALITY (UNIFIED)
 /* ============================================ */
-
-function initSlideshow() {
-  let slideIndex = 0;
-  const slides = document.querySelectorAll(".slide");
-  const dots = document.querySelectorAll(".dot");
-
-  if (slides.length === 0) return;
-
-  function showSlides() {
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].classList.remove("active");
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) slideIndex = 1;
-    if (slides[slideIndex - 1]) {
-      slides[slideIndex - 1].classList.add("active");
-    }
-    if (dots.length > 0) {
-      for (let i = 0; i < dots.length; i++) {
-        dots[i].classList.remove("active");
-      }
-      if (dots[slideIndex - 1]) {
-        dots[slideIndex - 1].classList.add("active");
-      }
-    }
-    setTimeout(showSlides, 5000);
-  }
-
-  showSlides();
-}
-AOS.init({ duration: 1000, once: true });
-
-// ============================================
-// AUTOMATIC SLIDESHOW FUNCTIONALITY (10 Images)
-// ============================================
-let slideIndex = 1;
-let slideInterval;
-let totalSlides = 10;
 
 function showSlides(n) {
   let slides = document.getElementsByClassName("slide");
   let dots = document.getElementsByClassName("dot");
 
+  if (slides.length === 0) return;
+
   if (n > slides.length) slideIndex = 1;
   if (n < 1) slideIndex = slides.length;
 
+  // Hide all slides
   for (let i = 0; i < slides.length; i++) {
     slides[i].classList.remove("active");
   }
 
+  // Remove active class from all dots
   for (let i = 0; i < dots.length; i++) {
     dots[i].classList.remove("active");
   }
 
+  // Show current slide and activate current dot
   if (slides[slideIndex - 1]) {
     slides[slideIndex - 1].classList.add("active");
   }
@@ -330,6 +302,7 @@ function autoSlide() {
 }
 
 function startInterval() {
+  if (slideInterval) clearInterval(slideInterval);
   slideInterval = setInterval(autoSlide, 5000);
 }
 
@@ -338,24 +311,27 @@ function resetInterval() {
   startInterval();
 }
 
-// Start automatic slideshow
-startInterval();
+function initSlideshow() {
+  const slides = document.querySelectorAll(".slide");
+  if (slides.length === 0) return;
 
-// Service card click handlers
-document.querySelectorAll(".service-card").forEach((card) => {
-  card.addEventListener("click", function () {
-    window.location.href = "login_simple.php";
-  });
-});
+  // Initialize first slide
+  showSlides(slideIndex);
 
-
-   
+  // Start automatic slideshow
+  startInterval();
+}
 
 /* ============================================ */
 // INITIALIZE ALL FUNCTIONS
 /* ============================================ */
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Initialize AOS
+  if (typeof AOS !== "undefined") {
+    AOS.init({ duration: 1000, once: true });
+  }
+
   initLanguageSwitcher();
   initScrollAnimations();
   initModals();
@@ -370,4 +346,64 @@ document.addEventListener("DOMContentLoaded", function () {
 
 window.addEventListener("load", function () {
   fixModalBackdrop();
+});
+
+// Image preview function
+function previewPhoto(input, previewId) {
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const container = document.getElementById(previewId + "Container");
+      const preview = document.getElementById(previewId);
+      if (container && preview) {
+        preview.src = e.target.result;
+        container.style.display = "block";
+      }
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Service cards click handler
+  document.querySelectorAll(".service-card").forEach((card) => {
+    card.addEventListener("click", function () {
+      const service = this.getAttribute("data-service");
+      if (service === "birth")
+        new bootstrap.Modal(document.getElementById("birthModal")).show();
+      else if (service === "marriage")
+        new bootstrap.Modal(document.getElementById("marriageModal")).show();
+      else if (service === "divorce")
+        new bootstrap.Modal(document.getElementById("divorceModal")).show();
+      else if (service === "death")
+        new bootstrap.Modal(document.getElementById("deathModal")).show();
+    });
+  });
+
+  // Navigation links click handler
+  const navBirth = document.getElementById("navBirth");
+  const navMarriage = document.getElementById("navMarriage");
+  const navDivorce = document.getElementById("navDivorce");
+  const navDeath = document.getElementById("navDeath");
+
+  if (navBirth)
+    navBirth.addEventListener("click", function (e) {
+      e.preventDefault();
+      new bootstrap.Modal(document.getElementById("birthModal")).show();
+    });
+  if (navMarriage)
+    navMarriage.addEventListener("click", function (e) {
+      e.preventDefault();
+      new bootstrap.Modal(document.getElementById("marriageModal")).show();
+    });
+  if (navDivorce)
+    navDivorce.addEventListener("click", function (e) {
+      e.preventDefault();
+      new bootstrap.Modal(document.getElementById("divorceModal")).show();
+    });
+  if (navDeath)
+    navDeath.addEventListener("click", function (e) {
+      e.preventDefault();
+      new bootstrap.Modal(document.getElementById("deathModal")).show();
+    });
 });
