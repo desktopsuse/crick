@@ -1,6 +1,8 @@
 <?php
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+/** @var mysqli $conn */
+global $conn;
 
 // Require login
 if (!isset($_SESSION['user_id'])) {

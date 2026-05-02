@@ -2,6 +2,8 @@
 session_start();
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+    /** @var mysqli $conn */
+    global $conn;
 
 if (!isset($_SESSION['user_id'])) {
     header('Location: login_simple.php');

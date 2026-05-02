@@ -1,5 +1,7 @@
 <?php
 require_once 'includes/config.php';
+        /** @var mysqli $conn */
+        global $conn;
 session_start();
 
 $admin_password = "admin123";

@@ -2,6 +2,8 @@
 session_start();
 require_once '../includes/config.php';
 require_once '../includes/functions.php';
+/** @var mysqli $conn */
+global $conn;
 
 // Enable error reporting for debugging
 error_reporting(E_ALL);
