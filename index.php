@@ -1,6 +1,6 @@
 <?php
 require_once 'includes/config.php';  // used to create connection database
-require_once 'includes/functions.php';  
+require_once 'includes/functions.php';
 include 'includes/header.php';
 
 ?>
@@ -17,7 +17,7 @@ include 'includes/header.php';
                     <a href="about.php" class="btn btn-outline"><?php echo getTranslation('learn_more'); ?></a>
                 </div>
             </div>
-            
+
             <div class="hero-login-card" data-aos="fade-left">
                 <i class="bi bi-shield-check fs-1 text-primary d-block text-center mb-3"></i>
                 <h3><?php echo getTranslation('welcome_to_vital'); ?></h3>
@@ -40,7 +40,7 @@ include 'includes/header.php';
             <h2><?php echo getTranslation('services_title'); ?></h2>
             <p>Register life's most important events securely and efficiently</p>
         </div>
-        
+
         <div class="services-grid">
             <div class="service-card" data-service="birth" data-aos="fade-up" data-aos-delay="100" style="background-image: url('assets/images/birth/births.jpg');">
                 <div class="service-content">
@@ -51,7 +51,7 @@ include 'includes/header.php';
                     <p><?php echo getTranslation('register_new_birth'); ?></p>
                 </div>
             </div>
-            
+
             <div class="service-card" data-service="marriage" data-aos="fade-up" data-aos-delay="200" style="background-image: url('assets/images/marriage/mariage.jpeg');">
                 <div class="service-content">
                     <div class="service-icon">
@@ -61,7 +61,7 @@ include 'includes/header.php';
                     <p><?php echo getTranslation('register_marriage'); ?></p>
                 </div>
             </div>
-            
+
             <div class="service-card" data-service="divorce" data-aos="fade-up" data-aos-delay="300" style="background-image: url('assets/images/divorce/divorce.jpg');">
                 <div class="service-content">
                     <div class="service-icon">
@@ -71,7 +71,7 @@ include 'includes/header.php';
                     <p><?php echo getTranslation('register_divorce'); ?></p>
                 </div>
             </div>
-            
+
             <div class="service-card" data-service="death" data-aos="fade-up" data-aos-delay="400" style="background-image: url('assets/images/death/death.avif');">
                 <div class="service-content">
                     <div class="service-icon">
@@ -94,7 +94,7 @@ include 'includes/header.php';
             <h2><?php echo getTranslation('gallery'); ?></h2>
             <p><?php echo getTranslation('gallery_subtitle'); ?></p>
         </div>
-        
+
         <div class="slideshow-container" data-aos="fade-up">
             <!-- Slide 1 -->
             <div class="slide active">
@@ -104,7 +104,7 @@ include 'includes/header.php';
                     <p>Celebrating new beginnings / አዲስ ሕይወት ማክበር</p>
                 </div>
             </div>
-            
+
             <!-- Slide 2 -->
             <div class="slide">
                 <img src="assets/images/slideshow/slide2.webp" alt="Marriage Registration">
@@ -113,7 +113,7 @@ include 'includes/header.php';
                     <p>Uniting hearts and families / ልቦችን እና ቤተሰቦችን ማሰራገት</p>
                 </div>
             </div>
-            
+
             <!-- Slide 3 -->
             <div class="slide">
                 <img src="assets/images/slideshow/slide3.jpeg" alt="Digital Services">
@@ -122,7 +122,7 @@ include 'includes/header.php';
                     <p>Modern and efficient registration / ዘመናዊ እና ቀልጣፋ ምዝገባ</p>
                 </div>
             </div>
-            
+
             <!-- Slide 4 -->
             <div class="slide">
                 <img src="assets/images/slideshow/slide4.webp" alt="Certificate Issuance">
@@ -131,7 +131,7 @@ include 'includes/header.php';
                     <p>Official and secure documents / ኦፊሴላዊ እና ደህንነቱ የተጠበቀ ሰነድ</p>
                 </div>
             </div>
-            
+
             <!-- Slide 5 -->
             <div class="slide">
                 <img src="assets/images/slideshow/slide5.jpg" alt="Customer Service">
@@ -140,7 +140,7 @@ include 'includes/header.php';
                     <p>Dedicated support team / ታማኝ የድጋፍ ቡድን</p>
                 </div>
             </div>
-            
+
             <!-- Slide 6 -->
             <div class="slide">
                 <img src="assets/images/slideshow/slide6.jpg" alt="Registration Office">
@@ -149,7 +149,7 @@ include 'includes/header.php';
                     <p>Modern facilities / ዘመናዊ መገልገያዎች</p>
                 </div>
             </div>
-            
+
             <!-- Slide 7 -->
             <div class="slide">
                 <img src="assets/images/slideshow/slide7.jpg" alt="Digital Kiosk">
@@ -158,7 +158,7 @@ include 'includes/header.php';
                     <p>Self-service registration / ራስን ማገልገያ ምዝገባ</p>
                 </div>
             </div>
-            
+
             <!-- Slide 8 -->
             <div class="slide">
                 <img src="assets/images/slideshow/slide8.jpeg" alt="Mobile Registration">
@@ -167,7 +167,7 @@ include 'includes/header.php';
                     <p>Registration on the go / በእንቅስቃሴ ላይ ምዝገባ</p>
                 </div>
             </div>
-            
+
             <!-- Slide 9 -->
             <div class="slide">
                 <img src="assets/images/slideshow/slide9.webp" alt="Community Outreach">
@@ -176,7 +176,7 @@ include 'includes/header.php';
                     <p>Serving the community / ማህበረሰቡን ማገልገል</p>
                 </div>
             </div>
-            
+
             <!-- Slide 10 -->
             <div class="slide">
                 <img src="assets/images/slideshow/slide10.jpg" alt="National ID">
@@ -185,12 +185,12 @@ include 'includes/header.php';
                     <p>Seamless digital identity / እንከን የለሽ ዲጂታል መታወቂያ</p>
                 </div>
             </div>
-            
+
             <!-- Navigation Arrows -->
             <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
             <a class="next" onclick="changeSlide(1)">&#10095;</a>
         </div>
-        
+
         <!-- Dots/Indicators -->
         <div class="dots-container">
             <span class="dot" onclick="currentSlide(1)"></span>
@@ -235,30 +235,33 @@ include 'includes/header.php';
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    AOS.init({ duration: 1000, once: true });
-    
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+
     // ============================================
     // AUTOMATIC SLIDESHOW FUNCTIONALITY (10 Images)
     // ============================================
     let slideIndex = 1;
     let slideInterval;
     let totalSlides = 10;
-    
+
     function showSlides(n) {
         let slides = document.getElementsByClassName("slide");
         let dots = document.getElementsByClassName("dot");
-        
+
         if (n > slides.length) slideIndex = 1;
         if (n < 1) slideIndex = slides.length;
-        
+
         for (let i = 0; i < slides.length; i++) {
             slides[i].classList.remove("active");
         }
-        
+
         for (let i = 0; i < dots.length; i++) {
             dots[i].classList.remove("active");
         }
-        
+
         if (slides[slideIndex - 1]) {
             slides[slideIndex - 1].classList.add("active");
         }
@@ -266,33 +269,33 @@ include 'includes/header.php';
             dots[slideIndex - 1].classList.add("active");
         }
     }
-    
+
     function changeSlide(n) {
         showSlides(slideIndex += n);
         resetInterval();
     }
-    
+
     function currentSlide(n) {
         showSlides(slideIndex = n);
         resetInterval();
     }
-    
+
     function autoSlide() {
         showSlides(slideIndex += 1);
     }
-    
+
     function startInterval() {
         slideInterval = setInterval(autoSlide, 5000);
     }
-    
+
     function resetInterval() {
         clearInterval(slideInterval);
         startInterval();
     }
-    
+
     // Start automatic slideshow
     startInterval();
-    
+
     // Service card click handlers
     document.querySelectorAll('.service-card').forEach(card => {
         card.addEventListener('click', function() {
