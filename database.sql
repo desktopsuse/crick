@@ -31,6 +31,16 @@ CREATE TABLE IF NOT EXISTS otp_verification (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- TABLE: password_resets
+CREATE TABLE IF NOT EXISTS password_resets (
+    id INT(11) PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(100) NOT NULL,
+    token VARCHAR(255) NOT NULL,
+    expires_at DATETIME NOT NULL,
+    used TINYINT(1) DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 -- =====================================================
 -- birth_registrations table
 -- =====================================================

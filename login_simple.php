@@ -82,6 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     <div class="text-center mt-4">
                         <p class="mb-2"><?php echo getTranslation('dont_have_account'); ?> <a href="register_simple.php"><?php echo getTranslation('register_here'); ?></a></p>
+                        <p class="mb-2"><a href="forgot_password.php"><?php echo getTranslation('forgot_password'); ?></a></p>
                         <a href="index.php" class="btn btn-back w-100 mt-2"><i class="bi bi-arrow-left"></i> <?php echo getTranslation('back_to_home'); ?></a>
                     </div>
 
